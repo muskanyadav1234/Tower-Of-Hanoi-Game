@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.instructions h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    color: #34495e;
+    margin: 5px 0;
+}
+
+.game-info {
+    margin: 20px 0;
+}
+
+.game-info p {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#preview {
+    background-color: #3498db;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.towers-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.tower-section {
+    text-align: center;
+}
+
+.tower-label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.tower {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rod {
+    position: absolute;
+    width: 20px;
+    height: 180px;
+    background-color: #95a5a6;
+    border-radius: 10px;
+    bottom: 0;
+}
+
+.disk {
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 15px;
+    margin: 2px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.disk[data-size="1"] { width: 60px; background-color: #e74c3c; }
+.disk[data-size="2"] { width: 90px; background-color: #f1c40f; }
+.disk[data-size="3"] { width: 120px; background-color: #2ecc71; }
+.disk[data-size="4"] { width: 150px; background-color: #3498db; }
+
+.tower.selected .rod {
+    background-color: #27ae60;
+}
+
+.disk.selected {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.status-message {
+    margin-top: 20px;
+    padding: 10px;
+    color: #2c3e50;
+    font-weight: bold;
+}

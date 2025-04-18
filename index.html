@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tower of Hanoi</h1>
+        <div class="instructions">
+            <h2>How to Play:</h2>
+            <p>1. Move all disks from Source (A) to Destination (C)</p>
+            <p>2. Move only one disk at a time</p>
+            <p>3. Larger disk cannot be placed on smaller disk</p>
+        </div>
+        <div class="game-info">
+            <p>Moves: <span id="moves">0</span></p>
+            <button id="reset">Reset Game</button>
+            <button id="preview">Show Solution</button>
+        </div>
+        <div class="towers-container">
+            <div class="tower-section">
+                <div class="tower" id="tower1">
+                    <div class="rod"></div>
+                    <div class="disk" data-size="4"></div>
+                    <div class="disk" data-size="3"></div>
+                    <div class="disk" data-size="2"></div>
+                    <div class="disk" data-size="1"></div>
+                </div>
+                <p class="tower-label">Source (A)</p>
+            </div>
+            <div class="tower-section">
+                <div class="tower" id="tower2">
+                    <div class="rod"></div>
+                </div>
+                <p class="tower-label">Helper (B)</p>
+            </div>
+            <div class="tower-section">
+                <div class="tower" id="tower3">
+                    <div class="rod"></div>
+                </div>
+                <p class="tower-label">Destination (C)</p>
+            </div>
+        </div>
+        <div class="status-message" id="status"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
