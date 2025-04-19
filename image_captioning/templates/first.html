@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='muskan.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Captioning</h1>
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <button id="uploadBtn">Upload Image</button>
+            <p class="info">or drag and drop an image here</p>
+        </div>
+        <div class="preview-section">
+            <img id="imagePreview" src="" alt="">
+            <div class="caption-box">
+                <h3>Generated Caption:</h3>
+                <p id="captionText">Upload an image to generate caption</p>
+            </div>
+        </div>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Generating caption...</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='my.js') }}"></script>
+</body>
+</html>
